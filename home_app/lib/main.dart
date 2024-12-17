@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
+              const Text(
                 'WELCOME',
                 style: TextStyle(
                   fontSize: 60,

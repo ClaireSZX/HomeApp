@@ -64,6 +64,9 @@ flutter:
     - asset/homeAppLogo.png
     - asset/profilepicture.png
     - asset/HCI background.jpeg
+    - asset/air cond icon.png
+    - asset/lamp icon.png
+    - asset/tv icon.png
  
 
   # An image asset can refer to one or more resolution-specific "variants", see

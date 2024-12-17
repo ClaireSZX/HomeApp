@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_app/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +23,10 @@ class RoomsPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context); // Navigate back to the previous page
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return homepage();
+                  })
+                  );// Navigate back to the previous page
           },
         ),
         title: Text('Your Rooms'),

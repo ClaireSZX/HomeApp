@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:home_app/Roommenu.dart';
 import 'package:home_app/addDevice';
+import 'package:home_app/livingRoomPage.dart';
+import 'package:home_app/profilepage.dart';
+import 'package:home_app/scene.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,8 +31,8 @@ class _HomeScreenState extends State<homepage> {
   final List<Widget> _pages = [
     HomeContent(), // Main content page
     AddDeviceScreen(), // Add Devices page
-    ProfilePage(), // Profile page
-    SettingsPage(), // New Settings page
+    scenepage(), // Profile page
+    profilepage(), // New Settings page
   ];
 
   @override
@@ -57,14 +60,18 @@ class _HomeScreenState extends State<homepage> {
             label: 'Add Devices',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.article_outlined),
+            label: 'Scene',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],
 
         backgroundColor:  Color.fromRGBO(100, 44, 12, 100), // Background color of the navigation bar
-        selectedItemColor: Colors.white, // Color of the selected tab
-        unselectedItemColor: Colors.grey[300], // Color of the unselected tabs
+        selectedItemColor: Color.fromRGBO(100, 44, 12, 100), // Color of the selected tab
+        unselectedItemColor: Colors.black, // Color of the unselected tabs
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold), // Style for selected tab label
         unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal), 
       ),
@@ -205,7 +212,10 @@ class HomeContent extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle "See All" action
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return RoomsPage();
+                  })
+                  );
                 },
                 child: Text('See All'),
               ),
@@ -260,7 +270,10 @@ class HomeContent extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle "See All" action
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return LivingRoomPage();
+                  })
+                  );
                 },
                 child: Text('See All'),
               ),
@@ -311,7 +324,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Settings Page',
+        'Profile Page',
         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_app/addDevice.dart'; // Import the addDevice.dart file
+import 'package:home_app/addDevice'; // Import the addDevice.dart file
 
 class LivingRoomPage extends StatelessWidget {
   @override
@@ -73,15 +73,15 @@ class LivingRoomPage extends StatelessWidget {
             children: [
               _buildDeviceTile(
                 'OLED TV',
-                'assets/tv_icon.png', // Corrected path
+                'assets/tv icon.png', // Corrected path
               ),
               _buildDeviceTile(
                 'Air Conditioner',
-                'assets/air_cond_icon.png', // Corrected path
+                'assets/air cond icon.png', // Corrected path
               ),
               _buildDeviceTile(
                 'Main Lamp',
-                'assets/lamp_icon.png', // Corrected path
+                'assets/lamp icon.png', // Corrected path
               ),
             ],
           ),
