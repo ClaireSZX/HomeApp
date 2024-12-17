@@ -63,6 +63,7 @@ flutter:
   assets:
     - asset/homeAppLogo.png
     - asset/profilepicture.png
+    - asset/HCI background.jpeg
  
 
   # An image asset can refer to one or more resolution-specific "variants", see

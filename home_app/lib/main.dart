@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ), 
-      //home: const SignInPage(),
+      
       home: WelcomeScreen(),
     ); 
   }
@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
       body: DecoratedBox(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdJxVwFqL0q9OjDTXwI3v77Yzi7tZxE6Fzdn6WWzLtArkMqDsj'
+            image: AssetImage('asset/HCI background.jpeg'
             ),
             fit: BoxFit.cover,
           ),
@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 60,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(100, 44, 12, 100),
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 20),
@@ -54,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 60,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(100, 44, 12, 100),
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 20),
@@ -63,7 +63,7 @@ class WelcomeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 10),
@@ -72,7 +72,7 @@ class WelcomeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 30),
