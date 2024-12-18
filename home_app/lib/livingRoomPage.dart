@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_app/addDevice'; // Import the addDevice.dart file
+import 'package:home_app/util/category_cards.dart';
+
 
 class LivingRoomPage extends StatelessWidget {
   @override
@@ -68,24 +70,30 @@ class LivingRoomPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildDeviceTile(
-                'OLED TV',
-                'assets/tv icon.png', // Corrected path
+          SizedBox(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  CategoryCard(
+                    categoryName: 'OLED TV',
+                    iconImagePath: 'asset/tvicon.jpeg',
+                  ),
+                  CategoryCard(
+                    categoryName: 'Lamp',
+                    iconImagePath: 'asset/lampicon.png', 
+                  ),
+                  CategoryCard(
+                    categoryName: 'Air conditioner',
+                    iconImagePath: 'asset/aircond.jpeg'
+                  ),
+
+                  SizedBox(width: 10),
+                ],
               ),
-              _buildDeviceTile(
-                'Air Conditioner',
-                'assets/air cond icon.png', // Corrected path
-              ),
-              _buildDeviceTile(
-                'Main Lamp',
-                'assets/lamp icon.png', // Corrected path
-              ),
-            ],
-          ),
-          SizedBox(height: 24),
+            ),
+
+          SizedBox(height: 50),
 
           // Modes Section
           Text(
@@ -101,8 +109,7 @@ class LivingRoomPage extends StatelessWidget {
             '10%-yellow',
             '18C',
             '80%',
-            'Curtains closed',
-            'assets/cinema_mode.png', // Corrected path
+            'Curtains closed', // Corrected path
           ),
           SizedBox(height: 24),
 
@@ -162,32 +169,6 @@ class LivingRoomPage extends StatelessWidget {
     );
   }
 
-  // Reusable Widget for Device Tiles with Images
-  Widget _buildDeviceTile(String deviceName, String imagePath) {
-    return Card(
-      elevation: 4,
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Image.asset(
-              imagePath,
-              width: 64,
-              height: 64,
-            ),
-            SizedBox(height: 8),
-            Text(
-              deviceName,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   // Reusable Widget for Mode Tiles with Images
   Widget _buildModeTile(
@@ -196,7 +177,6 @@ class LivingRoomPage extends StatelessWidget {
     String temperature,
     String humidity,
     String curtainsStatus,
-    String imagePath,
   ) {
     return Card(
       elevation: 4,
@@ -205,12 +185,6 @@ class LivingRoomPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              imagePath,
-              width: 64,
-              height: 64,
-            ),
-            SizedBox(height: 8),
             Text(
               modeName,
               style: TextStyle(

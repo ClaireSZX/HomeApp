@@ -59,14 +59,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # To add assets to your application, add an assets section, like this: 
   assets:
     - asset/homeAppLogo.png
     - asset/profilepicture.png
     - asset/HCI background.jpeg
-    - asset/air cond icon.png
-    - asset/lamp icon.png
-    - asset/tv icon.png
+    - asset/tvicon.jpeg
+    - asset/lampicon.png
+    - asset/aircond.jpeg
  
 
   # An image asset can refer to one or more resolution-specific "variants", see
